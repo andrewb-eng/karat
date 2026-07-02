@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version; python -c \"import pandas, pydantic, pytest; print\\('pandas', pandas.__version__, '| pydantic', pydantic.__version__, '| pytest', pytest.__version__\\)\")",
+      "PowerShell(py *)",
+      "PowerShell(winget install *)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\('Path','User'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('Path','Machine'\\); python --version; \\(Get-Command python\\).Source)",
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" -m venv .venv; if \\($?\\) { & .\\\\.venv\\\\Scripts\\\\python.exe -m pip install --quiet pandas pydantic pytest })"
+    ]
+  }
+}
